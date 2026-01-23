@@ -828,6 +828,17 @@ print_success "All Packet"
 }
 
 #Instal Menu
+
+# Install System.zip
+function install_system(){
+clear
+cd /tmp
+print_install "Memasang System Packet"
+wget -q -O system.zip https://raw.githubusercontent.com/vpnmultiplus-89/MULTIPLUS_V3/main/system.zip
+unzip -o system.zip -d / >/dev/null 2>&1
+rm -f system.zip
+}
+
 function menu(){
 clear
 cd
@@ -968,6 +979,8 @@ clear
     ins_Fail2ban
     ins_epro
     ins_restart
+
+    install_system
     menu
     profile
     enable_services
@@ -1022,7 +1035,7 @@ echo -e "\033[0;32m└───────────────────�
 echo -e "\e[94;1m╔═════════════════════════════════════════════════╗\e[0m"
 echo -e "\e[92;1m               [ TERIMAKASIH ]                      \e[0m"
 echo -e "\e[94;1m╚═════════════════════════════════════════════════╝\e[0m"
-echo -e " t.me/Fauziii09"
+echo -e " t.me/JPOFFICIAL"
 echo -e " TERIMAKASIH SUDAH MENGGUNAKAN LAYANAN SC MULTIPLUS PREMIUM"
 echo -e "\e[94;1m╚═════════════════════════════════════════════════╝\e[0m"
 echo -e ""
